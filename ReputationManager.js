@@ -1,8 +1,8 @@
 'use strict';
 
-var db = module.parent.parent.require('./database'),
-    async = require('async'),
-    UserVotingPermissions = require('./UserVotingPermissions.js');
+var async = require('async');
+var db = require.main.require('./src/database');
+var UserVotingPermissions = require('./UserVotingPermissions.js');
 
 var ReputationManager = function (Config) {
     this.userCanUpvotePost = function (user, post, callback) {

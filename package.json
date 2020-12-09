@@ -1,27 +1,50 @@
 {
-  "name": "nodebb-plugin-reputation-rules",
-  "version": "1.1.3",
-  "description": "Reputation rules to prevent abuse and make it more reliable",
-  "main": "library.js",
-  "repository": {
+  "_from": "git+https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+  "_id": "nodebb-plugin-reputation-rules@1.1.3",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/nodebb-plugin-reputation-rules",
+  "_phantomChildren": {},
+  "_requested": {
     "type": "git",
-    "url": "https://github.com/exo-do/nodebb-plugin-reputation-rules"
+    "raw": "https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+    "rawSpec": "https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+    "saveSpec": "git+https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+    "fetchSpec": "https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+    "gitCommittish": null
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/amosin/nodebb-plugin-reputation-rules.git#f8dd7ff786f127ffd8d19cd8ddb32923a4d14f19",
+  "_spec": "https://github.com/amosin/nodebb-plugin-reputation-rules.git",
+  "_where": "/home/nodebb/nodebb",
+  "author": {
+    "name": "TheBronx"
+  },
+  "bugs": {
+    "url": "https://github.com/exo-do/nodebb-plugin-reputation-rules/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Reputation rules to prevent abuse and make it more reliable",
+  "homepage": "https://github.com/exo-do/nodebb-plugin-reputation-rules#readme",
   "keywords": [
     "nodebb",
     "plugin",
     "reputation",
     "rules"
   ],
-  "author": {
-    "name": "TheBronx"
-  },
   "license": "GNU-GPL v2",
-  "bugs": {
-    "url": "https://github.com/exo-do/nodebb-plugin-reputation-rules/issues"
-  },
-  "readmeFilename": "README.md",
+  "main": "library.js",
+  "name": "nodebb-plugin-reputation-rules",
   "nbbpm": {
     "compatibility": "^1.0.x || ^1.1.x"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exo-do/nodebb-plugin-reputation-rules.git"
+  },
+  "version": "1.1.3"
 }

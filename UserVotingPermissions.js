@@ -1,5 +1,9 @@
 'use strict';
 
+var users = require('../../src/user/index');
+//
+///home/nodebb/nodebb/node_modules/nodebb-plugin-reputation-rules/UserVotingPermissions.js
+
 var UserVotingPermissions = function (Config, db, user, post) {
     var _this = this;
     this.user = user;
@@ -7,8 +11,10 @@ var UserVotingPermissions = function (Config, db, user, post) {
 
     this.hasEnoughPostsToUpvote = function (callback) {
         var allowed = _this.user.postcount >= Config.minPostToUpvote();
-        if (!allowed) callback({'reason': 'notEnoughPosts'});
+        users.getUserField(_this.user.uid, 'phoneNumber:verified').then((userVerified) => {
+        if (!allowed && !userVerified) callback({'reason': 'notEnoughPosts'});
         else callback();
+        })
     };
 
     this.isOldEnoughToUpvote = function (callback) {
@@ -16,8 +22,10 @@ var UserVotingPermissions = function (Config, db, user, post) {
         var xDaysAgo = now.getTime() - Config.minDaysToUpvote() * 24 * 60 * 60 * 1000;
 
         var allowed = _this.user.joindate < xDaysAgo;
-        if (!allowed) callback({'reason': 'notOldEnough'});
-        else callback();
+        users.getUserField(_this.user.uid, 'phoneNumber:verified').then((userVerified) => {
+            if (!allowed && !userVerified) callback({'reason': 'notOldEnough'});
+            else callback();
+        })
     };
 
     this.hasVotedTooManyPostsInThread = function (callback) {

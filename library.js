@@ -1,12 +1,6 @@
 "use strict";
 
 var plugin = {'settingsVersion': '1.1.2'},
-    db = module.parent.require('./database'),
-    users = module.parent.require('./user'),
-    meta = module.parent.require('./meta'),
-    Settings = module.parent.require('./settings'),
-    SocketAdmin = module.parent.require('./socket.io/admin'),
-
     winston = require('winston'),
 
     ReputationParams = require('./ReputationParams'),
@@ -16,6 +10,13 @@ var plugin = {'settingsVersion': '1.1.2'},
     ReputationManager = null,
     VoteFilter = null,
     pluginSettings = null;
+
+    var db = require.main.require('./src/database');
+    var users = require.main.require('./src/user');
+    var meta = require.main.require('./src/meta');
+    var Settings = require.main.require('./src/settings');
+    var SocketAdmin = require.main.require('./src/socket.io/admin');
+
 
 plugin.onLoad = function (params, callback) {
     ReputationManager = new (require('./ReputationManager'))(Config);
