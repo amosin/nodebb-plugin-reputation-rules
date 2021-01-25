@@ -9,7 +9,7 @@ var UserVotingPermissions = function (Config, db, user, post) {
 
     this.isVerifiedToUpvote = function (callback) {
         users.getUserField(_this.user.uid, 'phoneNumber:verified').then((userVerified) => {
-            if (!userVerified) callback({'reason': 'tooManyVotesToday'});
+            if (!userVerified) callback({'reason': 'userNotVerified'});
             else callback();
             })
     };
