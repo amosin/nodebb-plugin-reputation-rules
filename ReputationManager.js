@@ -10,6 +10,7 @@ var ReputationManager = function (Config) {
 
         async.series([
                 userPermissions.votingAllowedInCategory,
+                userPermissions.isVerifiedToUpvote,
                 userPermissions.hasEnoughPostsToUpvote,
                 userPermissions.isOldEnoughToUpvote,
                 userPermissions.hasVotedTooManyPostsInThread,

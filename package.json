@@ -1,6 +1,6 @@
 {
   "_from": "git+https://github.com/amosin/nodebb-plugin-reputation-rules.git",
-  "_id": "nodebb-plugin-reputation-rules@1.1.3",
+  "_id": "nodebb-plugin-reputation-rules@1.1.4",
   "_inBundle": false,
   "_integrity": "",
   "_location": "/nodebb-plugin-reputation-rules",
@@ -24,12 +24,12 @@
     "name": "TheBronx"
   },
   "bugs": {
-    "url": "https://github.com/exo-do/nodebb-plugin-reputation-rules/issues"
+    "url": "https://github.com/amosin/nodebb-plugin-reputation-rules/issues"
   },
   "bundleDependencies": false,
   "deprecated": false,
   "description": "Reputation rules to prevent abuse and make it more reliable",
-  "homepage": "https://github.com/exo-do/nodebb-plugin-reputation-rules#readme",
+  "homepage": "https://github.com/amosin/nodebb-plugin-reputation-rules#readme",
   "keywords": [
     "nodebb",
     "plugin",
@@ -44,7 +44,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/exo-do/nodebb-plugin-reputation-rules.git"
+    "url": "git+https://github.com/amosin/nodebb-plugin-reputation-rules.git"
   },
-  "version": "1.1.3"
+  "version": "1.1.3",
+  "dependencies": {
+    "async": "^3.2.0",
+    "winston": "^3.3.3"
+  }
 }

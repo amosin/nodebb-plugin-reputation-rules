@@ -7,5 +7,6 @@
   "tooManyVotesToSameUserThisMonth": "Você não pode votar neste usuário novamente até o próximo mês",
   "tooManyVotesToday": "Você não pode votar hoje",
   "postTooOld": "Você não pode votar nesta mensagem, é muito antiga",
-  "unknownError": "Erro ao votar"
+  "unknownError": "Erro ao votar",
+  "userNotVerified": "Apenas usuários verificados podem votar. Clique <a href=\"../../verify\">aqui</a></a> para verificar."
 }
